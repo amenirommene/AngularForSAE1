@@ -1,0 +1,11 @@
+<form [formGroup]="myForm">
+ Appartment number :  <input type="text" formControlName="AppartementNumber" >  {{myForm.get('AppartementNumber').touched}} # {{myForm.get('AppartementNumber').untouched}}<br>
+ <div *ngIf="myForm.get('AppartementNumber').touched && myForm.get('AppartementNumber').errors"> <!--ecrire .errors ou bien .invalid-->
+  <div *ngIf="myForm.get('AppartementNumber').errors['required']"> Numero appartement obligatoire</div>
+  <div *ngIf="myForm.get('AppartementNumber').errors['minlength']"> Minimum 5 caractères </div>
+</div>
+ Floor number :  <input type="text" formControlName="FloorNumber" > {{FNumber.pristine}} # {{FNumber.dirty}}
+ <div *ngIf="FNumber.dirty && FNumber.invalid">Numero étage obligatoire</div>
+ <br>
+ <button [disabled]="myForm.invalid">Add</button>
+</form>

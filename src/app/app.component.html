@@ -1,0 +1,13 @@
+<!--<app-test2></app-test2>--->
+<!--One way data-binding -->
+<!--  {{ title }}----><!--  interpolation : TS -> HTML -->
+<!-- <button (click)="f(1)">test</button>---> <!--event binding  HTML -> TS -->
+<!-- <input [value]="title">---> <!--property binding TS -> HTML -->
+<!-- <br>ngModel: <input [(ngModel)]="title">  --->
+<!--routerLink : directive qui remplace l'attribut "href" et qui désactive le chargement (relaod) de la page-->
+<a [routerLink]="['test',1,'ahmed']">Test</a> *** <a routerLink="residence">Residence</a> ** <a routerLink="add">Ajouter un appartement</a> <br>
+<!--- routerOutlet: directive qui indique au routeur où charger la vue du composant-->
+<router-outlet></router-outlet>
+
+
+
