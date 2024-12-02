@@ -1,1 +1,13 @@
-<p>add-residence works!</p>
+<form [formGroup]="myForm">
+  Name :  <input type="text" formControlName="name" >
+  {{nameR.touched}} # {{nameR.untouched}}<br>
+  <div *ngIf="nameR.touched && nameR.errors"> <!--ecrire .errors ou bien .invalid-->
+   <div *ngIf="nameR.errors['required']"> Numero appartement obligatoire</div>
+   <div *ngIf="nameR.errors['minlength']"> Minimum 5 caractères </div>
+ </div>
+  Address :  <input type="text" formControlName="address" > {{addressR.pristine}} # {{addressR.dirty}}
+  <div *ngIf="addressR.dirty && addressR.invalid">Numero étage obligatoire</div>
+  <br>
+  <button [disabled]="myForm.invalid">Add</button>
+ </form>
+
