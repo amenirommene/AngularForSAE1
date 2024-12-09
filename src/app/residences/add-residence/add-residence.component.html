@@ -1,4 +1,4 @@
-<form [formGroup]="myForm">
+<form [formGroup]="myForm" (ngSubmit)="addR()">
   Name :  <input type="text" formControlName="name" >
   {{nameR.touched}} # {{nameR.untouched}}<br>
   <div *ngIf="nameR.touched && nameR.errors"> <!--ecrire .errors ou bien .invalid-->

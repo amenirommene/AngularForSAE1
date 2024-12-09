@@ -1,5 +1,10 @@
 <p>{{id}}</p>
 
+<img [src]="residence.image">
+<div>{{residence.name}}</div>
+<div>{{residence.address}}</div>
+<div><div>{{residence.status}}</div>
+
 <button [routerLink]="['/details',next]">next</button>
 
 <button [routerLink]="['/addResidence']">Add Residence</button>

@@ -26,4 +26,8 @@ export class ResidenceService {
   getResidencesByIdFromBackend(id:number) : Observable<Residence>{
     return this.http.get<Residence>("http://localhost:3000/residences/"+id);
    }
+
+   addResidence(r:Residence):Observable<Residence>{
+    return this.http.post<Residence>("http://localhost:3000/residences",r)
+   }
 }
