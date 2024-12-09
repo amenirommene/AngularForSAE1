@@ -16,7 +16,7 @@ import { AddResidenceComponent } from './residences/add-residence/add-residence.
 import { AddApartmentComponent } from './Apartments/add-apartment/add-apartment.component';
 import { ApartmentsComponent } from './Apartments/apartments/apartments.component';
 import { ApartmentsByResidenceComponent } from './Apartments/apartments-by-residence/apartments-by-residence.component';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [ //la liste des composants
     AppComponent,
@@ -37,7 +37,8 @@ import { ApartmentsByResidenceComponent } from './Apartments/apartments-by-resid
     BrowserModule, //sous node_modules
     AppRoutingModule, //sous le App
     FormsModule, // utile pour ngModel
-    ReactiveFormsModule //utile pour travailler avec ReactiveForm
+    ReactiveFormsModule, //utile pour travailler avec ReactiveForm
+    HttpClientModule
   ],
   providers: [], //les services utiles
   bootstrap: [AppComponent] //le(s) composants à appeler dans le fichier index.html
